@@ -15,7 +15,8 @@ import {
   Award,
   Shield,
   Heart,
-  Palette
+  Palette,
+  Trophy
 } from 'lucide-react'
 
 // Componente SEO Head (para meta tags dinâmicas)
@@ -121,6 +122,18 @@ const Portfolio = () => {
       alt: 'Tatuagem estilo preto e cinza - Bruno Tattoo - Angra dos Reis'
     },
     { 
+      id: 5, 
+      style: 'Realismo', 
+      image: 'src/assets/lobo.JPG',
+      alt: 'Tatuagem estilo realismo - Bruno Tattoo - Angra dos Reis'
+    },    
+    { 
+      id: 11, 
+      style: 'Preto e cinza', 
+      image: 'src/assets/wallace.jpg',
+      alt: 'Tatuagem preto e preto e cinza - Bruno Tattoo - Angra dos Reis'
+    },     
+    { 
       id: 2, 
       style: 'Achuras', 
       image: 'src/assets/cobra.png',
@@ -137,12 +150,6 @@ const Portfolio = () => {
       style: 'Rastelado', 
       image: 'src/assets/Hercules.JPG',
       alt: 'Tatuagem estilo rastelado - Bruno Tattoo - Angra dos Reis'
-    },
-    { 
-      id: 5, 
-      style: 'Realismo', 
-      image: 'src/assets/lobo.JPG',
-      alt: 'Tatuagem estilo realismo - Bruno Tattoo - Angra dos Reis'
     },
     { 
       id: 6, 
@@ -173,13 +180,7 @@ const Portfolio = () => {
       style: 'Portrait', 
       image: 'src/assets/thomas~2.jpg',
       alt: 'Tatuagem preto e portrait - Bruno Tattoo - Angra dos Reis'
-    },  
-    { 
-      id: 11, 
-      style: 'Preto e cinza', 
-      image: 'src/assets/wallace.jpg',
-      alt: 'Tatuagem preto e preto e cinza - Bruno Tattoo - Angra dos Reis'
-    },        
+    },         
   ]
 
   return (
@@ -277,10 +278,10 @@ const Sobre = () => {
               </div>
               <div className="text-center">
                 <div className="bg-black text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3" aria-hidden="true">
-                  <Heart className="w-8 h-8" />
-                </div>
-                <h3 className="font-semibold text-gray-900">500+</h3>
-                <p className="text-gray-600">Clientes Satisfeitos</p>
+                  <Trophy className="w-8 h-8" />
+                </div>               
+                <p className="text-gray-600">Artista</p>
+                <h3 className="font-semibold text-gray-900">premiado</h3>
               </div>
             </div>
           </motion.div>
@@ -293,7 +294,7 @@ const Sobre = () => {
           >
             <div className="aspect-square rounded-lg overflow-hidden shadow-2xl">
               <img 
-                src="src/assets/eu.jpg" 
+                src="public/eu.jpg" 
                 alt="Bruno - Tatuador profissional com mais de 10 anos de experiência em Angra dos Reis"
                 className="w-full h-full object-cover"
                 loading="lazy"
@@ -467,23 +468,29 @@ const FAQ = () => {
 const Depoimentos = () => {
   const testimonials = [
     {
-      name: 'Maria Silva',
-      text: 'Experiência incrível! Bruno é um artista excepcional e o resultado ficou perfeito.',
+      name: 'Tatiana Alencar',
+      text: 'Excelente profissional! Super gente boa! Inovador, alto astral! O atendimento e a atenção que ele tem com os projetos também fazem total diferença! Eu coloco piercing e tatoo com ele.  O ambiente é limpo, esterilizado, organizado e preparado por cada trabalho que vá ser realizado. Fiquei muito satisfeita com os resultados! Fidelizei e recomendo!',
       rating: 5,
-      image: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face'
+      image: 'src/assets/semfoto.jpg'
     },
     {
-      name: 'João Santos',
-      text: 'Profissionalismo e qualidade incomparáveis. Recomendo de olhos fechados!',
+      name: 'André Dehoul',
+      text: 'Bruno é um tatuador de uma técnica fantástica, traços firmes, material de excelente qualidade! Uma pessoa maravilhosa; a sua tranquilidade e segurança nos deixa tranquilos e seguros. Sem contar o espaço super bacana. Já foram quatro tatoos assinadas pelo Bruno...mais virão!!!!',
       rating: 5,
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face'
+      image: 'src/assets/semfoto.jpg'
     },
     {
-      name: 'Ana Costa',
-      text: 'Ambiente limpo, seguro e acolhedor. Minha tatuagem ficou exatamente como eu queria.',
+      name: 'Pedro Henrique',
+      text: 'Tatuador super gente fina, super atencioso, me deu todas as instruções do que fazer desde o primeiro dia, até o final da cicatrização. Amei o atendimento e a arte',
       rating: 5,
-      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face'
-    }
+      image: 'src/assets/semfoto.jpg'
+    },
+    {
+      name: 'Joaquim Paiva',
+      text: 'Que tattoo sensacional, mano! Bruno se garante ao extremo. Ficou surreal. Irado demais, demais!!!!!!!!',
+      rating: 5,
+      image: 'src/assets/semfoto.jpg'
+    },    
   ]
 
   return (
@@ -544,28 +551,6 @@ const Depoimentos = () => {
 
 // Componente Contato otimizado
 const Contato = () => {
-  const [formData, setFormData] = useState({
-    nome: '',
-    email: '',
-    telefone: '',
-    descricao: '',
-    tamanho: '',
-    local: ''
-  })
-
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    // Aqui você pode implementar o envio do formulário
-    console.log('Formulário enviado:', formData)
-    alert('Obrigado! Entraremos em contato em breve.')
-  }
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    })
-  }
 
   return (
     <section id="contato" className="py-20 bg-white" role="region" aria-labelledby="contato-title">
@@ -585,115 +570,6 @@ const Contato = () => {
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-          >
-            <form onSubmit={handleSubmit} className="space-y-6" aria-label="Formulário de orçamento para tatuagem">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="nome" className="block text-sm font-medium text-gray-700 mb-2">Nome</label>
-                  <input
-                    type="text"
-                    id="nome"
-                    name="nome"
-                    value={formData.nome}
-                    onChange={handleChange}
-                    required
-                    aria-required="true"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">Email</label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    aria-required="true"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent"
-                  />
-                </div>
-              </div>
-              
-              <div>
-                <label htmlFor="telefone" className="block text-sm font-medium text-gray-700 mb-2">Telefone</label>
-                <input
-                  type="tel"
-                  id="telefone"
-                  name="telefone"
-                  value={formData.telefone}
-                  onChange={handleChange}
-                  required
-                  aria-required="true"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent"
-                />
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="tamanho" className="block text-sm font-medium text-gray-700 mb-2">Tamanho Aproximado</label>
-                  <select
-                    id="tamanho"
-                    name="tamanho"
-                    value={formData.tamanho}
-                    onChange={handleChange}
-                    required
-                    aria-required="true"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent"
-                  >
-                    <option value="">Selecione</option>
-                    <option value="pequena">Pequena (até 5cm)</option>
-                    <option value="media">Média (5-15cm)</option>
-                    <option value="grande">Grande (15cm+)</option>
-                  </select>
-                </div>
-                <div>
-                  <label htmlFor="local" className="block text-sm font-medium text-gray-700 mb-2">Local do Corpo</label>
-                  <input
-                    type="text"
-                    id="local"
-                    name="local"
-                    value={formData.local}
-                    onChange={handleChange}
-                    placeholder="Ex: braço, perna, costas..."
-                    required
-                    aria-required="true"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label htmlFor="descricao" className="block text-sm font-medium text-gray-700 mb-2">Descrição da Ideia</label>
-                <textarea
-                  id="descricao"
-                  name="descricao"
-                  value={formData.descricao}
-                  onChange={handleChange}
-                  rows={4}
-                  required
-                  aria-required="true"
-                  placeholder="Descreva sua ideia de tatuagem..."
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent"
-                ></textarea>
-              </div>
-
-              <motion.button
-                type="submit"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="w-full bg-black text-white py-4 rounded-lg font-semibold text-lg hover:bg-gray-800 transition-colors"
-                aria-label="Enviar solicitação de orçamento para tatuagem"
-              >
-                Solicitar Orçamento Agora
-              </motion.button>
-            </form>
-          </motion.div>
 
           <motion.div
             initial={{ opacity: 0, x: 30 }}
@@ -707,7 +583,7 @@ const Contato = () => {
               <div className="space-y-4">
                 <div className="flex items-center">
                   <Phone className="w-6 h-6 text-black mr-4" aria-hidden="true" />
-                  <span className="text-gray-700" itemProp="telephone">(11) 99999-9999</span>
+                  <span className="text-gray-700" itemProp="telephone">(24) 99856-4421</span>
                 </div>
                 <div className="flex items-center">
                   <Mail className="w-6 h-6 text-black mr-4" aria-hidden="true" />
@@ -715,7 +591,7 @@ const Contato = () => {
                 </div>
                 <div className="flex items-center">
                   <MapPin className="w-6 h-6 text-black mr-4" aria-hidden="true" />
-                  <span className="text-gray-700" itemProp="address">Rua das Artes, 123 - São Paulo, SP</span>
+                  <span className="text-gray-700" itemProp="address">Rua Japoranga, 320 - Angra dos Reis, RJ</span>
                 </div>
               </div>
             </div>
@@ -739,13 +615,13 @@ const Contato = () => {
             </div>
 
             <motion.a
-              href="https://wa.me/5511999999999"
+              href="https://wa.me/5524998564421"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="inline-flex items-center bg-green-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-600 transition-colors"
-              aria-label="Entrar em contato via WhatsApp para orçamento de tatuagem"
+              aria-label="Entrar em contato via WhatsApp para orçamento"
             >
               <MessageCircle className="w-5 h-5 mr-2" aria-hidden="true" />
               Fale Conosco via WhatsApp
@@ -766,26 +642,17 @@ const Footer = () => {
           <div>
             <h3 className="text-2xl font-bold mb-4">Bruno Tattoo</h3>
             <p className="text-gray-400 mb-4">
-              Transformando ideias em arte permanente com qualidade e segurança.
+              Transformando sonhos em arte.
             </p>
             <div className="flex space-x-4">
               <a 
-                href="https://instagram.com/brunotattoo" 
+                href="https://www.instagram.com/brunoribeiro.tatuador/" 
                 className="text-gray-400 hover:text-white transition-colors"
                 aria-label="Seguir Bruno Tattoo no Instagram"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <Instagram className="w-6 h-6" />
-              </a>
-              <a 
-                href="https://facebook.com/brunotattoo" 
-                className="text-gray-400 hover:text-white transition-colors"
-                aria-label="Seguir Bruno Tattoo no Facebook"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Facebook className="w-6 h-6" />
               </a>
             </div>
           </div>
@@ -805,9 +672,9 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Contato</h4>
             <address className="space-y-2 text-gray-400 not-italic">
-              <p>(11) 99999-9999</p>
-              <p>contato@brunotattoo.com</p>
-              <p>Rua das Artes, 123<br />São Paulo, SP</p>
+              <p>(24) 99856-4421</p>
+              <p>brunnoribeiroangra21@gmail.com</p>
+              <p>Rua Japoranga, 320<br />Angra dos Reis, RJ</p>
             </address>
           </div>
         </div>
@@ -825,10 +692,10 @@ function App() {
   return (
     <div className="App">
       <SEOHead 
-        title="Bruno Tattoo - Estúdio de Tatuagem em São Paulo | Arte na Pele"
-        description="Bruno Tattoo - Estúdio de tatuagem especializado em diversos estilos em São Paulo. Mais de 10 anos de experiência, 500+ clientes satisfeitos. Agende sua consulta gratuita!"
-        image="https://brunotattoo.com/og-image.jpg"
-        url="https://brunotattoo.com/"
+        title="Bruno Tattoo - Estúdio de Tatuagem em Angra dos Reis"
+        description="Bruno Tattoo - Estúdio de tatuagem especializado em diversos estilos em Angra dos Reis. Mais de 10 anos de experiência. Venha fazer seu orçamento!"
+        image="https://dev.brunotattoo.com.br/eu.jpg"
+        url="https://dev.brunotattoo.com.br/"
       />
       <Header />
       <HeroSection />

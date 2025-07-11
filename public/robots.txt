@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://brunotattoo.com.br/sitemap.xml
+Sitemap: https://dev.brunotattoo.com.br/sitemap.xml
 
 # Disallow admin areas (se houver)
 # Disallow: /admin/
