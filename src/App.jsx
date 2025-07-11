@@ -118,67 +118,67 @@ const Portfolio = () => {
     { 
       id: 1, 
       style: 'Preto e cinza', 
-      image: 'src/assets/batman~2.jpg',
+      image: '/batman~2.jpg',
       alt: 'Tatuagem estilo preto e cinza - Bruno Tattoo - Angra dos Reis'
     },
     { 
       id: 5, 
       style: 'Realismo', 
-      image: 'src/assets/lobo.JPG',
+      image: '/lobo.JPG',
       alt: 'Tatuagem estilo realismo - Bruno Tattoo - Angra dos Reis'
     },    
     { 
       id: 11, 
       style: 'Preto e cinza', 
-      image: 'src/assets/wallace.jpg',
+      image: '/wallace.jpg',
       alt: 'Tatuagem preto e preto e cinza - Bruno Tattoo - Angra dos Reis'
     },     
     { 
       id: 2, 
       style: 'Rachuras', 
-      image: 'src/assets/cobra.png',
+      image: '/cobra.png',
       alt: 'Tatuagem estilo Rachuras - Bruno Tattoo - Angra dos Reis'
     },
     { 
       id: 3, 
       style: 'Rastelado', 
-      image: 'src/assets/gustavo.jpg',
+      image: '/gustavo.jpg',
       alt: 'Tatuagem estilo rastelado - Bruno Tattoo - Angra dos Reis'
     },
     { 
       id: 4, 
       style: 'Rastelado', 
-      image: 'src/assets/Hercules.JPG',
+      image: '/Hercules.JPG',
       alt: 'Tatuagem estilo rastelado - Bruno Tattoo - Angra dos Reis'
     },
     { 
       id: 6, 
       style: 'Néo tradicional', 
-      image: 'src/assets/manuele.JPG',
+      image: '/manuele.JPG',
       alt: 'Tatuagem néo tradicional - Bruno Tattoo - Angra dos Reis'
     },
     { 
       id: 7, 
       style: 'Rastelado', 
-      image: 'src/assets/olho.JPG',
+      image: '/olho.JPG',
       alt: 'Tatuagem rastelado - Bruno Tattoo - Angra dos Reis'
     },    
     { 
       id: 8, 
       style: 'Portrait', 
-      image: 'src/assets/shelbi.jpg',
+      image: '/shelbi.jpg',
       alt: 'Tatuagem portrait - Bruno Tattoo - Angra dos Reis'
     },     
     { 
       id: 9, 
       style: 'Preto e cinza', 
-      image: 'src/assets/simba.jpg',
+      image: '/simba.jpg',
       alt: 'Tatuagem preto e cinza - Bruno Tattoo - Angra dos Reis'
     },     
     { 
       id: 10, 
       style: 'Portrait', 
-      image: 'src/assets/thomas~2.jpg',
+      image: '/thomas~2.jpg',
       alt: 'Tatuagem preto e portrait - Bruno Tattoo - Angra dos Reis'
     },         
   ]
@@ -294,7 +294,7 @@ const Sobre = () => {
           >
             <div className="aspect-square rounded-lg overflow-hidden shadow-2xl">
               <img 
-                src="public/eu.jpg" 
+                src="/eu.jpg" 
                 alt="Bruno - Tatuador profissional com mais de 10 anos de experiência em Angra dos Reis"
                 className="w-full h-full object-cover"
                 loading="lazy"
@@ -471,25 +471,25 @@ const Depoimentos = () => {
       name: 'Tatiana Alencar',
       text: 'Excelente profissional! Super gente boa! Inovador, alto astral! O atendimento e a atenção que ele tem com os projetos também fazem total diferença! Eu coloco piercing e tatoo com ele.  O ambiente é limpo, esterilizado, organizado e preparado por cada trabalho que vá ser realizado. Fiquei muito satisfeita com os resultados! Fidelizei e recomendo!',
       rating: 5,
-      image: 'src/assets/semfoto.jpg'
+      image: '/semfoto.jpg'
     },
     {
       name: 'André Dehoul',
       text: 'Bruno é um tatuador de uma técnica fantástica, traços firmes, material de excelente qualidade! Uma pessoa maravilhosa; a sua tranquilidade e segurança nos deixa tranquilos e seguros. Sem contar o espaço super bacana. Já foram quatro tatoos assinadas pelo Bruno...mais virão!!!!',
       rating: 5,
-      image: 'src/assets/semfoto.jpg'
+      image: '/semfoto.jpg'
     },
     {
       name: 'Pedro Henrique',
       text: 'Tatuador super gente fina, super atencioso, me deu todas as instruções do que fazer desde o primeiro dia, até o final da cicatrização. Amei o atendimento e a arte',
       rating: 5,
-      image: 'src/assets/semfoto.jpg'
+      image: '/semfoto.jpg'
     },
     {
       name: 'Joaquim Paiva',
       text: 'Que tattoo sensacional, mano! Bruno se garante ao extremo. Ficou surreal. Irado demais, demais!!!!!!!!',
       rating: 5,
-      image: 'src/assets/semfoto.jpg'
+      image: '/semfoto.jpg'
     },    
   ]
 

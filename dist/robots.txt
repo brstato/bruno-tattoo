@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://dev.brunotattoo.com.br/sitemap.xml
+
+# Disallow admin areas (se houver)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Allow important pages
+Allow: /
+Allow: /portfolio
+Allow: /sobre
+Allow: /processo
+Allow: /contato
+
+# Crawl delay (opcional)
+Crawl-delay: 1
+
