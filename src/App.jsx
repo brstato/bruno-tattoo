@@ -694,8 +694,8 @@ function App() {
       <SEOHead 
         title="Bruno Tattoo - Estúdio de Tatuagem em Angra dos Reis"
         description="Bruno Tattoo - Estúdio de tatuagem especializado em diversos estilos em Angra dos Reis. Mais de 10 anos de experiência. Venha fazer seu orçamento!"
-        image="https://dev.brunotattoo.com.br/eu.jpg"
-        url="https://dev.brunotattoo.com.br/"
+        image="https://brunotattoo.com.br/eu.jpg"
+        url="https://brunotattoo.com.br/"
       />
       <Header />
       <HeroSection />
