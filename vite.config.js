@@ -13,6 +13,6 @@ export default defineConfig({
   },
   server: {
     host: true,
-    allowedHosts: ['dev.brunotattoo.com.br'],
+    allowedHosts: ['brunotattoo.com.br'],
   },  
 })

@@ -135,9 +135,9 @@ const Portfolio = () => {
     },     
     { 
       id: 2, 
-      style: 'Achuras', 
+      style: 'Rachuras', 
       image: 'src/assets/cobra.png',
-      alt: 'Tatuagem estilo Achuras - Bruno Tattoo - Angra dos Reis'
+      alt: 'Tatuagem estilo Rachuras - Bruno Tattoo - Angra dos Reis'
     },
     { 
       id: 3, 
